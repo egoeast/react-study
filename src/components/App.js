@@ -15,15 +15,18 @@ class App extends Component {
             <div className="container">
                 <div className="jumbotron">
                     <h1 className="display-3">App name</h1>
-                    <button onClick={this.revert}>Reverse</button>
+                    <button onClick={
+                        this.revert
+                    }>Reverse</button>
                 </div>
                 <ArticleList articles={this.state.reversed ? articles.reverse() : articles }/>
             </div>
         )
     }
 
-    revert = () => this.setState({
-        reversed: !this.state.reversed
+    revert = () => this.setState(
+        {
+            reversed: !this.state.reversed
     })
 }
 
